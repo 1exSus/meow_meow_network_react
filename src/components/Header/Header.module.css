@@ -1,0 +1,24 @@
+
+.header{
+    grid-area: h;
+    background-color: blueviolet;
+    display: grid;
+    grid-template-columns:1fr 5fr ;
+}
+
+.headerImg img{
+    width: 40px;
+    margin: 4px;
+    border-radius: 5px;
+    border: solid yellow;
+}
+.headerTitle{
+    font-size: 30px;
+    padding-left: 1px;
+}
+.headerTitle img{
+    width: 300px;
+}
+
+
+
