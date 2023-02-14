@@ -55,8 +55,3 @@ let store = {
 window.store = store
 export default store
 
-export class onMessageChangeActionCreator {
-}
-
-export class sendMessageChangeActionCreator {
-}

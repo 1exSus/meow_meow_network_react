@@ -3,10 +3,7 @@ import Post from "./Post/Post";
 import s from './MyPosts.module.css'
 import {addPostActionCreator, onPostChangeActionCreator} from "../../../redux/profile-reducer";
 
-
 const MyPosts = (props) => {
-
-
 
     let postElements = props.postData.map(p => <Post id={p.id} message={p.message} likes={p.likesCount}/>)
 
@@ -19,7 +16,6 @@ const MyPosts = (props) => {
         let text = newPostElement.current.value
         props.dispatch(onPostChangeActionCreator(text))
     }
-
 
     return (
         <div className={s.postsBlock}>
