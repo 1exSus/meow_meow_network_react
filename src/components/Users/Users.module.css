@@ -1,4 +1,8 @@
+.usersPage{
+    padding: 20px;
+}
 .userPhoto{
+    border-radius: 50%;
     width: 100px;
     height: 100px;
 }

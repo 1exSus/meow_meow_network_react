@@ -20,9 +20,7 @@ let mapDispatchToPropsFactory = (dispatch) => {
             dispatch(setUsersAC(users))
         }
     }
-
 }
-
 
 const UsersContainer = connect(mapStateToPropsFactory, mapDispatchToPropsFactory)(Users)
 

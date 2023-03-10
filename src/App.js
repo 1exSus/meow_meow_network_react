@@ -15,7 +15,7 @@ const App = (props) => {
     return (
             <div className='app'>
                 <div className='app-wrapper'>
-                    <Header/>
+                    <Header/> 
                     <Navbar/>
                     <div className='app-wrapper-content'>
                         <Routes>
