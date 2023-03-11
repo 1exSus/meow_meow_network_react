@@ -13,21 +13,21 @@ import UsersContainer from "./components/Users/UsersContainer";
 
 const App = (props) => {
     return (
-            <div className='app'>
-                <div className='app-wrapper'>
-                    <Header/> 
-                    <Navbar/>
-                    <div className='app-wrapper-content'>
-                        <Routes>
-                            <Route path='/profile' element = {<Profile/>} />
-                            <Route path='/dialogs/*' element = {<DialogContainer/>} />
-                            <Route path='/users' element = {<UsersContainer/>} />
-                            <Route path='/news' element = {<News/>} />
-                            <Route path='/Music' element = {<Music/>} />
-                            <Route path='/setting' element = {<Setting/>} />
-                        </Routes>
-                    </div>
+        <div className='app'>
+            <div className='app-wrapper'>
+                <Header/>
+                <Navbar/>
+                <div className='app-wrapper-content'>
+                    <Routes>
+                        <Route path='/profile' element = {<Profile/>} />
+                        <Route path='/dialogs/*' element = {<DialogContainer/>} />
+                        <Route path='/users' element = {<UsersContainer/>} />
+                        <Route path='/news' element = {<News/>} />
+                        <Route path='/Music' element = {<Music/>} />
+                        <Route path='/setting' element = {<Setting/>} />
+                    </Routes>
                 </div>
+            </div>
             </div>
     );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import styles from './Users.module.css'
 import userPhoto from '../../assets/images/user.jpg'
 
+
 let Users = (props) => {
 
         let pagesCount = Math.ceil(props.totalUserCount/props.pageSize)
@@ -10,7 +11,6 @@ let Users = (props) => {
         for (let i = 1; i <= 10; i++) {
             pages.push(i)
         }
-
         return <div className={styles.usersPage}>
             <div className={styles.currentPageStyleBlock}>
                 {pages.map(p =>{
