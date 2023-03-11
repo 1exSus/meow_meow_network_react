@@ -1,5 +1,5 @@
 .usersPage{
-    padding: 20px;
+    padding:30px;
 }
 .userPhoto{
     border-radius: 50%;
@@ -7,7 +7,13 @@
     height: 100px;
 }
 .currentPageStyleBlock{
-    padding: 10px;
+    display: inline-block;
+    padding: 5px;
+    border: 2px blueviolet solid;
+    border-radius: 30%;
+    margin: 10px;
+    box-shadow: yellow 1px 1px ;
+
 }
 .currentPageStyle {
 
