@@ -14,8 +14,6 @@ import Preloader from "../common/preloader/Preloader";
 
 
 
-
-
 class UsersContainer extends React.Component {
 
     componentDidMount() {
@@ -52,7 +50,6 @@ class UsersContainer extends React.Component {
     }
 }
 
-
 let mapStateToPropsFactory = (state) => {
     return {
         users: state.usersPage.users,
@@ -84,5 +81,4 @@ let mapDispatchToPropsFactory = (dispatch) => {
         }
     }
 }
-
 export default connect(mapStateToPropsFactory, mapDispatchToPropsFactory)(UsersContainer)
