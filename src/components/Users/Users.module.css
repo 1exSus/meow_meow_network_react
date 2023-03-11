@@ -6,3 +6,11 @@
     width: 100px;
     height: 100px;
 }
+.currentPageStyleBlock{
+    padding: 10px;
+}
+.currentPageStyle {
+
+    font-weight: bold;
+
+}
