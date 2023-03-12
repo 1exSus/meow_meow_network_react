@@ -6,9 +6,7 @@ import ReactDOM from "react-dom/client";
 import store from "./redux/redux-store";
 import {Provider} from "react-redux";
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
 root.render(
         <BrowserRouter>
             <Provider store={store}>
@@ -16,7 +14,6 @@ root.render(
             </Provider>
         </BrowserRouter>
 );
-
 //test2
 
 // If you want to start measuring performance in your app, pass a function
