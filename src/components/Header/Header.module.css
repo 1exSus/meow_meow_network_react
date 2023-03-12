@@ -15,10 +15,25 @@
 .headerTitle{
     font-size: 30px;
     padding-left: 1px;
+
 }
 .headerTitle img{
     width: 300px;
-}
 
+}
+.login{
+    display: inline-block;
+    border: solid yellow;
+    position: relative;
+    bottom: 42%;
+    left: 58%;
+}
+.authLogin{
+    display: inline-block;
+    border: solid yellow;
+    position: relative;
+    bottom: 42%;
+    left: 42%;
+}
 
 
