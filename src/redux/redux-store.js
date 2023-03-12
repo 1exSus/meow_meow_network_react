@@ -10,6 +10,10 @@ let reducers = combineReducers({
     dialogsPage: dialogsReducer
 })
 
-let store = legacy_createStore(reducers)
+
+
+let store = legacy_createStore(reducers);
+window.store = store;
+
 
 export default store
