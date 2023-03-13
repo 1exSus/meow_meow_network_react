@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './Users.module.css'
 import userPhoto from '../../assets/images/user.jpg'
-import {NavLink} from "react-router-dom";
+import {Navigate, NavLink} from "react-router-dom";
 
 let Users = (props) => {
 
@@ -11,7 +11,12 @@ let Users = (props) => {
             pages.push(i)
         }
 
+    if(props.isAuth === false) return  <Navigate  to={'/login'} />
+
         return <div className={styles.usersPage}>
+
+
+
             <div className={styles.currentPageStyleBlock}>
                 {pages.map(p =>{
                    return <span className={p === props.currentPage && styles.currentPageStyle}

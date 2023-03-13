@@ -8,6 +8,7 @@ import {
     toggleIsFollowingProgress,
     unfollow
 } from "../../redux/users-reducer";
+import authReducer from "../../redux/auth-reducer";
 
 
 class UsersContainer extends React.Component {
@@ -35,6 +36,7 @@ class UsersContainer extends React.Component {
                    onPageChanged={this.onPageChanged}
                    toggleIsFollowingProgress={this.props.toggleIsFollowingProgress}
                    followingProgress={this.props.followingProgress}
+                   isAuth = {this.props.isAuth}
             />
         </>
     }
@@ -48,6 +50,7 @@ let mapStateToPropsFactory = (state) => {
         totalUserCount: state.usersPage.totalUserCount,
         isFetching: state.usersPage.isFetching,
         followingProgress: state.usersPage.followingProgress,
+        isAuth: state.auth.isAuth
     }
 }
 
