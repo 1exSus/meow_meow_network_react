@@ -2,7 +2,15 @@ import React from "react";
 import {connect} from "react-redux";
 import Users from "./Users";
 import Preloader from "../common/preloader/Preloader";
-import {follow, setCurrentPage, setTotalUsers, setUsers, toggleIsFetching, unfollow} from "../../redux/users-reducer";
+import {
+    follow,
+    setCurrentPage,
+    setTotalUsers,
+    setUsers,
+    toggleIsFetching,
+    toggleIsFollowingProgress,
+    unfollow
+} from "../../redux/users-reducer";
     import {usersAPI} from "../../api/API";
 
 class UsersContainer extends React.Component {
@@ -36,6 +44,8 @@ class UsersContainer extends React.Component {
                    unfollow={this.props.unfollow}
                    follow={this.props.follow}
                    onPageChanged={this.onPageChanged}
+                   toggleIsFollowingProgress={this.props.toggleIsFollowingProgress}
+                   followingProgress={this.props.followingProgress}
             />
         </>
     }
@@ -48,6 +58,7 @@ let mapStateToPropsFactory = (state) => {
         pageSize: state.usersPage.pageSize,
         totalUserCount: state.usersPage.totalUserCount,
         isFetching: state.usersPage.isFetching,
+        followingProgress: state.usersPage.followingProgress,
     }
 }
 
@@ -57,5 +68,6 @@ export default connect(mapStateToPropsFactory, {
     setUsers,
     setCurrentPage,
     setTotalUsers,
-    toggleIsFetching
+    toggleIsFetching,
+    toggleIsFollowingProgress
 })(UsersContainer)
