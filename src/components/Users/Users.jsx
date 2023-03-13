@@ -8,7 +8,7 @@ import axios from "axios";
 
 let Users = (props) => {
 
-        let follow-unfollow apipagesCount = Math.ceil(props.totalUserCount/props.pageSize)
+        let pagesCount = Math.ceil(props.totalUserCount/props.pageSize)
         let pages = []
         for (let i = 1; i <= 10; i++) {
             pages.push(i)
