@@ -8,7 +8,7 @@ import {
     toggleIsFollowingProgress,
     unfollow
 } from "../../redux/users-reducer";
-import {withAuthRedirect} from "../../hoc/withAuthRedirerect";
+
 import {compose} from "redux";
 
 
@@ -56,7 +56,7 @@ let mapStateToPropsFactory = (state) => {
 }
 
 export default compose(
-    withAuthRedirect,
+    // withAuthRedirect,
     connect(mapStateToPropsFactory, {
         follow,
         unfollow,
