@@ -3,6 +3,7 @@ import {onMessageChangeActionCreator, sendMessageChangeActionCreator} from "../.
 import Dialog from "./Dialog";
 import {connect} from "react-redux";
 import {compose} from "redux";
+import {withAuthRedirect} from "../../hoc/withAuthRedirerect";
 
 
 
@@ -24,7 +25,7 @@ let mapDispatchToProps = (dispatch) => {
 
 
 export default compose(
-    // withAuthRedirect,
+    withAuthRedirect,
     connect(mapStateToProps, mapDispatchToProps)
 )(Dialog)
 
