@@ -1,13 +1,18 @@
 import React from "react";
 import LoginForm from "./LoginForm";
+import {connect} from "react-redux";
+import {login} from "../../redux/auth-reducer";
 
 
 const Login = (props) => {
 
     return <div>
         <h1>LOGIN</h1>
-        <LoginForm/>
+        <LoginForm login={props.login} isAuth={props.isAuth}/>
     </div>
 }
 
-export default Login
+const mapStateToPropsFactory = (state) =>( {
+    isAuth: state.auth.isAuth
+})
+export default connect(mapStateToPropsFactory, {login})(Login)

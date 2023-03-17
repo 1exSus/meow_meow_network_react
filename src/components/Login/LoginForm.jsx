@@ -1,5 +1,6 @@
 import React from "react";
 import {useForm} from "react-hook-form";
+import {Navigate} from "react-router-dom";
 
 const LoginForm = (props) => {
 
@@ -7,14 +8,19 @@ const LoginForm = (props) => {
         register,
         formState: {
             errors,
+            isValid,
         },
         handleSubmit,
     } = useForm({
         mode: "onBlur"
     })
     const onSubmit = (data) => {
-        alert(JSON.stringify(data))
+        props.login(data.email, data.password, data.rememberMe)
     }
+
+    if(props.isAuth) return <Navigate to={'/Profile'} />
+
+
     return <div>
         <form onSubmit={handleSubmit(onSubmit)}>
             <div>
@@ -45,8 +51,12 @@ const LoginForm = (props) => {
             })
             } />
             <div>
+                <input {...register("checkbox")} type="checkbox"/>
+                Запомнить пользователя
+            </div>
+            <div>
                 <div>
-                    <button>Login</button>
+                    <button disabled={!isValid}>Login</button>
                 </div>
             </div>
         </form>

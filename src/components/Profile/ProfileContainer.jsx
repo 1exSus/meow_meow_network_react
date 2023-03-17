@@ -5,8 +5,6 @@ import Profile from "./Profile";
 import {useLocation, useNavigate, useParams} from "react-router-dom";
 import {compose} from "redux";
 
-
-
 class ProfileContainer extends React.Component {
 
     componentDidMount() {
