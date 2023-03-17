@@ -10,7 +10,6 @@ let initialState = {
         {id: '1', message: 'post1', likesCount: '19'},
         {id: '2', message: 'post12', likesCount: '24'},
     ],
-    newPostText: '',
     profile: null,
     status: ''
 }
@@ -20,19 +19,13 @@ const profileReducer = (state = initialState, action) => {
         case ADD_POST: {
             let newPost = {
                 id: '3',
-                message: state.newPostText,
+                message: action.newPostMassageBody,
                 likesCount: '0',
             }
             return {
                 ...state,
                 post: [...state.post, newPost],
                 newPostText: ''
-            }
-        }
-        case UPDATE_NEW_POST_CHANGE: {
-            return {
-                ...state,
-                newPostText: action.newText
             }
         }
         case SET_USER_PROFILE: {
@@ -46,7 +39,7 @@ const profileReducer = (state = initialState, action) => {
     }
 }
 
-export let addPostActionCreator = () => ({type: ADD_POST})
+export let addPostActionCreator = (newPostMassageBody) => ({type: ADD_POST, newPostMassageBody})
 export let onPostChangeActionCreator = (text) => ({type: UPDATE_NEW_POST_CHANGE, newText: text, })
 export let setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
 export let setStatus = (status) => ({type: SET_STATUS, status})
