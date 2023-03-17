@@ -14,6 +14,9 @@ const   Dialog = (props) => {
 
     const {
         register,
+        formState: {
+            isValid,
+        },
         handleSubmit,
         reset,
     } = useForm({
@@ -36,10 +39,13 @@ const   Dialog = (props) => {
             <div>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div>
-                        <textarea placeholder={'enter yo masage'} {...register('message')}/>
+                        <textarea placeholder={'enter yo masage'} {...register('message',{
+                            required: true,
+                            minLength: 1
+                        })}/>
                     </div>
                     <div>
-                        <button>Send message</button>
+                        <button disabled={!isValid}>Send message</button>
                     </div>
                 </form>
 
